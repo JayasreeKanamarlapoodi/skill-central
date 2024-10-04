@@ -1,0 +1,90 @@
+
+  #countdown {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #010101;
+    color: white;
+    /* padding: 10px; */
+    border-radius: 10px;
+    flex-wrap: wrap; /* Makes the container responsive */
+    width: 90%;
+    max-width: 600px;
+    /* height: 30px; */
+  }
+  
+  .time-box {
+    flex: 1;
+    min-width: 70px; /* Ensures a minimum width for each box */
+    text-align: center;
+    margin: 10px 0;
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  .colon {
+    flex: 0 0 auto;
+    font-size: 2em;
+    font-weight: bold;
+    margin: 0 5px;
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  #countdown span {
+    font-size: 2em;
+    font-weight: bold;
+    display: block;
+    animation: scaleUp 1s ease-in-out;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  @keyframes scaleUp {
+    from { transform: scale(0.5); }
+    to { transform: scale(1); }
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    #countdown {
+      flex-direction: row;
+      padding: 15px;
+      margin-left: 30px !important;
+      margin-bottom: 15px;
+    }
+  
+    .time-box {
+      font-size: 1em;
+    }
+  
+    .colon {
+      font-size: 1.5em;
+    }
+  
+    #countdown span {
+      font-size: 1.5em;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    #countdown {
+      /* padding: 10px; */
+      text-align: center;
+      margin-left: 22px !important;
+      margin-bottom: 15px;
+    }
+  
+    .time-box {
+      font-size: 1em;
+    }
+  
+    .colon {
+      font-size: 1.2em;
+    }
+  
+    #countdown span {
+      font-size: 1.2em;
+    }
+  }
